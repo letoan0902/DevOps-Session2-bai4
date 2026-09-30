@@ -1,0 +1,43 @@
+# Host: Ubuntu Server - Ubuntu 24.04.3 LTS - 2026-09-30 19:24 UTC
+
+$ sudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp (OpenSSH)           ALLOW IN    Anywhere                  
+22/tcp                     ALLOW IN    Anywhere                  
+80/tcp                     ALLOW IN    Anywhere                  
+22/tcp (OpenSSH (v6))      ALLOW IN    Anywhere (v6)             
+22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+
+
+$ sudo ufw status numbered
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] OpenSSH                    ALLOW IN    Anywhere                  
+[ 2] 22/tcp                     ALLOW IN    Anywhere                  
+[ 3] 80/tcp                     ALLOW IN    Anywhere                  
+[ 4] OpenSSH (v6)               ALLOW IN    Anywhere (v6)             
+[ 5] 22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[ 6] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+
+
+$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere                  
+22/tcp                     ALLOW       Anywhere                  
+80/tcp                     ALLOW       Anywhere                  
+OpenSSH (v6)               ALLOW       Anywhere (v6)             
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+80/tcp (v6)                ALLOW       Anywhere (v6)             
+
